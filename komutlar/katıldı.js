@@ -1,7 +1,7 @@
 const ayarlar = require('../ayarlar.json');
 const Discord = require('discord.js');
 exports.run = async(client, message, args) => {
-    if (!message.member.roles.cache.has(ayarlar.yetkilialımdm) && !message.member.hasPermission('ADMINISTRATOR')) return message.react()
+    if (!message.member.roles.cache.has(ayarlar.yetkilialımdm) && !message.member.hasPermission('ADMINISTRATOR')) return message.react("❌)
 
     if(!message.member.voice || message.member.voice.channelID != ayarlar.toplantıseskanal) return; 
     let üyeler = message.guild.members.cache.filter(member => member.roles.cache.has(ayarlar.katıldı) && member.voice.channelID != ayarlar.toplantıseskanal);
