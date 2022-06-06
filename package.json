@@ -1,0 +1,25 @@
+{
+  "name": "safecode",
+  "version": "1.0.0",
+  "description": "discord.gg/safecode",
+  "main": "adoncia.js",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "adoncia"
+  },
+  "keywords": [
+    "adoncia"
+  ],
+  "author": "adoncia",
+  "license": "MIT"
+}
