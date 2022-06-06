@@ -4,9 +4,9 @@ const moment = require("moment")
 moment.locale("tr")  
 exports.run = async(client, message, args) => {
 if (!message.member.roles.cache.has("KULLANACAK YETKİLİ ROL İD") && !message.member.hasPermission('ADMINISTRATOR')) return message.react("❌")
-let Adoncia = message.mentions.users.first()
-if (!Adoncia) return message.react("❌")
-let member = message.guild.member(Adoncia)
+let member = message.mentions.users.first() || message.guild.members.cache.get(args[0]);
+if (!member) return message.react("❌")
+
 
 let rol1 = ""
 let rol2 = ""
@@ -24,7 +24,7 @@ member.roles.remove(rol5)
 member.roles.remove(rol6)
 member.roles.add(rol7)
 member.roles.add(rol8)
-
+message.react("✅")
 let yetki3 = new Discord.MessageEmbed() 
 .setColor("RANDOM")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
