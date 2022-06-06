@@ -17,6 +17,7 @@ exports.run = async(client, message, args) => {
         member.roles.add(ayarlar.katıldı).catch();
       }, index * 1250)
     });
+ message.react("✅")
     message.channel.send(new Discord.MessageEmbed()
     .setFooter("Safe Code ❤ Adoncia")
     .setAuthor(message.author.tag,message.author.avatarURL({dynamic: true}))
